@@ -1,6 +1,7 @@
 // 題目 3：破解數學家的謎題 (Cracking the Mathematician's Puzzle) - 30分
 
 #include <iostream>
+#include <cmath>
 using namespace std;
 bool isPrime(int n) {
     if (n <= 1) {
@@ -24,13 +25,13 @@ int main() {
     int n;
     if (cin >> n) {
         if (n == 4) {
-            cout << "2 2" << "\n";
+            cout << "2 2\n";
             return 0;
         }
         for (int a = 3; a <= n / 2; a += 2) {
             int b = n - a;
             if (isPrime(a) && isPrime(b)) {
-                cout << a << " " << b << endl; 
+                cout << a << " " << b << "\n"; 
                 return 0; 
             }
         }
